@@ -1,0 +1,42 @@
+{
+  "name": "adaptive-fitness",
+  "version": "1.0.0",
+  "main": "expo-router/entry",
+  "dependencies": {
+    "@expo/metro-runtime": "~57.0.16",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "expo": "~57.0.26",
+    "expo-constants": "~57.0.20",
+    "expo-linking": "~57.0.11",
+    "expo-router": "~57.0.24",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0",
+    "react-native-web": "^0.21.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4",
+    "@types/react": "~19.2.2",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "npx tsx --test src/features/profile/__tests__/profile.test.ts src/features/training-strategy/__tests__/goalResolution.test.ts src/features/training-strategy/__tests__/frequencyResolution.test.ts src/features/training-strategy/__tests__/trainingStructure.test.ts src/features/training-strategy/__tests__/trainingLoad.test.ts src/features/training-strategy/__tests__/exerciseSelection.test.ts src/features/training-strategy/__tests__/populationGuard.test.ts src/features/training-strategy/__tests__/populationStrategy.test.ts src/features/training-strategy/__tests__/trainingDemand.test.ts src/features/training-strategy/__tests__/progressionStrategy.test.ts src/features/training-strategy/__tests__/conditioningStrategy.test.ts src/features/training-strategy/__tests__/recoveryConstraints.test.ts src/features/training-strategy/__tests__/strategyAssembly.test.ts src/features/workout-plan/__tests__/workoutPlanContracts.test.ts src/features/workout-plan/__tests__/sessionSkeleton.test.ts src/features/workout-plan/__tests__/prescriptionEngine.test.ts src/features/workout-runtime/__tests__/workoutRuntime.test.ts src/features/workout-runtime/__tests__/workoutPlayer.test.ts src/features/workout-plan/__tests__/workoutPlanGenerator.test.ts src/features/workout-history/__tests__/workoutHistory.test.ts src/features/workout-history/__tests__/adaptationLoop.test.ts src/features/nutrition/__tests__/nutritionValidation.test.ts src/features/nutrition/__tests__/nutritionStrategy.test.ts src/features/nutrition/__tests__/nutritionTargetEngine.test.ts src/features/nutrition/__tests__/nutritionPlanGenerator.test.ts src/features/nutrition/__tests__/mealComposition.test.ts src/features/nutrition/__tests__/nutritionExecution.test.ts src/features/nutrition/__tests__/nutritionCorrections.test.ts src/features/nutrition/__tests__/nutritionAdaptationIntegration.test.ts src/features/dashboard/__tests__/dashboard.test.ts src/features/onboarding/__tests__/quantitativeProfileUX.test.ts src/qa/__tests__/personas.test.ts",
+    "test:e2e": "playwright test",
+    "test:e2e:fast": "playwright test e2e/level-a-fast.spec.ts",
+    "test:e2e:core": "playwright test e2e/level-b-core.spec.ts",
+    "test:e2e:adaptive": "playwright test e2e/level-c-adaptive.spec.ts",
+    "test:e2e:nutrition": "playwright test e2e/level-d-nutrition.spec.ts",
+    "test:e2e:today": "playwright test e2e/level-e-today.spec.ts",
+    "test:onboarding": "playwright test e2e/onboarding.spec.ts",
+    "qa:report": "node -e \"console.log(require('fs').readFileSync('QA_REPORT.md','utf-8'))\""
+  },
+  "private": true
+}
